@@ -31,7 +31,7 @@ class ViewController: UIViewController,LFImagePickerControllerDelegate {
 //        mediaTypes.append(LFImagePickerMediaType.Video) //如果想加载视频的话
         let source = LFImagePickerSource.Photos //可以换成 ALAsset
         // 使用示例
-        let vc = LFImagePickerController()
+        let vc = LFImagePickerController.instance
         vc.mediaTypes = mediaTypes
         vc.source = source
         vc.imagePickerDelegate = self
@@ -46,7 +46,7 @@ class ViewController: UIViewController,LFImagePickerControllerDelegate {
     @available(iOS 8.0, *)
     func imagePickerController(picker: LFImagePickerController, didFinishPickingWithPhotosModels models: [LFImagePickerPhotosModel]) {
         for model in models {
-            model.getThumbImage(size: CGSize(width: 100, height: 100))
+            print("\( model.getThumbImage(size: CGSize(width: 100, height: 100)))") 
         }
         
     }

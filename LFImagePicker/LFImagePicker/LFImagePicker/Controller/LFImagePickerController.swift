@@ -31,7 +31,7 @@ protocol LFImagePickerDataSourceDelegate:NSObjectProtocol {
 }
 
 
-class LFImagePickerController: UINavigationController {
+class LFImagePickerController: UINavigationController,LFImagePickerDataSourceDelegate {
     public weak var imagePickerDelegate:LFImagePickerControllerDelegate?
     public var mediaTypes:[LFImagePickerMediaType]  = [.Photo]
     public var maxCount: Int = Int.max
@@ -87,21 +87,15 @@ class LFImagePickerController: UINavigationController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
+    class var instance:LFImagePickerController {
+        get {
+            let controller = LFImagePickerAlbumsController()
+            let navigation = LFImagePickerController(rootViewController: controller)
+            controller.delegate = navigation
+            return navigation
+        }
     }
     
-}
-
-
-extension LFImagePickerController:LFImagePickerDataSourceDelegate {
     
     func didFinishPicking() {
         if self.source == .Photos {
@@ -121,4 +115,18 @@ extension LFImagePickerController:LFImagePickerDataSourceDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+    
 }
+
+
+

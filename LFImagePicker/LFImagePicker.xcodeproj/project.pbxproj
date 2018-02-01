@@ -26,6 +26,12 @@
 		814D2A6F20205956003717A2 /* LFImagePickerAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814D2A6D20205956003717A2 /* LFImagePickerAlbumCell.xib */; };
 		814D2A7120205AA8003717A2 /* LFImagePickerAlbumsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D2A7020205AA8003717A2 /* LFImagePickerAlbumsController.swift */; };
 		814D2A7320205B47003717A2 /* LFImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D2A7220205B47003717A2 /* LFImagePickerController.swift */; };
+		815EE33D2022B28F0095F743 /* ImagePickerPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EE33B2022B28F0095F743 /* ImagePickerPreviewCell.swift */; };
+		815EE33E2022B28F0095F743 /* ImagePickerPreviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815EE33C2022B28F0095F743 /* ImagePickerPreviewCell.xib */; };
+		815EE3412022B5650095F743 /* LFImagePickerPreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EE33F2022B5650095F743 /* LFImagePickerPreviewController.swift */; };
+		815EE3422022B5650095F743 /* LFImagePickerPreviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815EE3402022B5650095F743 /* LFImagePickerPreviewController.xib */; };
+		815EE3452022C0970095F743 /* VideoPickerPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815EE3432022C0970095F743 /* VideoPickerPreviewCell.swift */; };
+		815EE3462022C0970095F743 /* VideoPickerPreviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815EE3442022C0970095F743 /* VideoPickerPreviewCell.xib */; };
 		81702CA920216BE800B4D2DE /* LFImagePickerAssetsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81702CA820216BE800B4D2DE /* LFImagePickerAssetsController.swift */; };
 		81702CAB202193F600B4D2DE /* LFImagePickerAssetsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81702CAA202193F600B4D2DE /* LFImagePickerAssetsController.xib */; };
 		81702CAE2021A1F000B4D2DE /* LFImagePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81702CAC2021A1F000B4D2DE /* LFImagePickerCell.swift */; };
@@ -81,6 +87,12 @@
 		814D2A6D20205956003717A2 /* LFImagePickerAlbumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LFImagePickerAlbumCell.xib; sourceTree = "<group>"; };
 		814D2A7020205AA8003717A2 /* LFImagePickerAlbumsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFImagePickerAlbumsController.swift; sourceTree = "<group>"; };
 		814D2A7220205B47003717A2 /* LFImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFImagePickerController.swift; sourceTree = "<group>"; };
+		815EE33B2022B28F0095F743 /* ImagePickerPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerPreviewCell.swift; sourceTree = "<group>"; };
+		815EE33C2022B28F0095F743 /* ImagePickerPreviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagePickerPreviewCell.xib; sourceTree = "<group>"; };
+		815EE33F2022B5650095F743 /* LFImagePickerPreviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFImagePickerPreviewController.swift; sourceTree = "<group>"; };
+		815EE3402022B5650095F743 /* LFImagePickerPreviewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LFImagePickerPreviewController.xib; sourceTree = "<group>"; };
+		815EE3432022C0970095F743 /* VideoPickerPreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPickerPreviewCell.swift; sourceTree = "<group>"; };
+		815EE3442022C0970095F743 /* VideoPickerPreviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoPickerPreviewCell.xib; sourceTree = "<group>"; };
 		81702CA820216BE800B4D2DE /* LFImagePickerAssetsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFImagePickerAssetsController.swift; sourceTree = "<group>"; };
 		81702CAA202193F600B4D2DE /* LFImagePickerAssetsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LFImagePickerAssetsController.xib; sourceTree = "<group>"; };
 		81702CAC2021A1F000B4D2DE /* LFImagePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFImagePickerCell.swift; sourceTree = "<group>"; };
@@ -185,6 +197,10 @@
 				814D2A6D20205956003717A2 /* LFImagePickerAlbumCell.xib */,
 				81702CAC2021A1F000B4D2DE /* LFImagePickerCell.swift */,
 				81702CAD2021A1F000B4D2DE /* LFImagePickerCell.xib */,
+				815EE33B2022B28F0095F743 /* ImagePickerPreviewCell.swift */,
+				815EE33C2022B28F0095F743 /* ImagePickerPreviewCell.xib */,
+				815EE3432022C0970095F743 /* VideoPickerPreviewCell.swift */,
+				815EE3442022C0970095F743 /* VideoPickerPreviewCell.xib */,
 				81702CB22021B67E00B4D2DE /* LFImagePickerPreviewFlowLayout.swift */,
 			);
 			path = View;
@@ -196,6 +212,8 @@
 				81702CA820216BE800B4D2DE /* LFImagePickerAssetsController.swift */,
 				81702CAA202193F600B4D2DE /* LFImagePickerAssetsController.xib */,
 				814D2A7020205AA8003717A2 /* LFImagePickerAlbumsController.swift */,
+				815EE33F2022B5650095F743 /* LFImagePickerPreviewController.swift */,
+				815EE3402022B5650095F743 /* LFImagePickerPreviewController.xib */,
 				814D2A7220205B47003717A2 /* LFImagePickerController.swift */,
 			);
 			path = Controller;
@@ -339,7 +357,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815EE33E2022B28F0095F743 /* ImagePickerPreviewCell.xib in Resources */,
 				81702CAB202193F600B4D2DE /* LFImagePickerAssetsController.xib in Resources */,
+				815EE3422022B5650095F743 /* LFImagePickerPreviewController.xib in Resources */,
+				815EE3462022C0970095F743 /* VideoPickerPreviewCell.xib in Resources */,
 				814D2A2A20200277003717A2 /* LaunchScreen.storyboard in Resources */,
 				814D2A6F20205956003717A2 /* LFImagePickerAlbumCell.xib in Resources */,
 				81702CAF2021A1F000B4D2DE /* LFImagePickerCell.xib in Resources */,
@@ -371,16 +392,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				815EE3452022C0970095F743 /* VideoPickerPreviewCell.swift in Sources */,
 				814D2A6320200B6B003717A2 /* Extensions.swift in Sources */,
 				814D2A6E20205956003717A2 /* LFImagePickerAlbumCell.swift in Sources */,
 				814D2A61202007F0003717A2 /* FlashAlertView.swift in Sources */,
 				81702CB32021B67E00B4D2DE /* LFImagePickerPreviewFlowLayout.swift in Sources */,
+				815EE3412022B5650095F743 /* LFImagePickerPreviewController.swift in Sources */,
 				814D2A6920202181003717A2 /* LFImagePickerPhotosModel.swift in Sources */,
 				814D2A2220200277003717A2 /* ViewController.swift in Sources */,
 				814D2A652020168A003717A2 /* LFImagePickerModel.swift in Sources */,
 				814D2A2020200277003717A2 /* AppDelegate.swift in Sources */,
 				81702CAE2021A1F000B4D2DE /* LFImagePickerCell.swift in Sources */,
 				814D2A7120205AA8003717A2 /* LFImagePickerAlbumsController.swift in Sources */,
+				815EE33D2022B28F0095F743 /* ImagePickerPreviewCell.swift in Sources */,
 				814D2A6B20204D56003717A2 /* LFImagePickerDataSource.swift in Sources */,
 				814D2A6720201999003717A2 /* LFImagePickerAssetsModel.swift in Sources */,
 				81702CA920216BE800B4D2DE /* LFImagePickerAssetsController.swift in Sources */,

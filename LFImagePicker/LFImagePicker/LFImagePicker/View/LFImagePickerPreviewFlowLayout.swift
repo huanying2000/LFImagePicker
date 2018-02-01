@@ -22,9 +22,7 @@ class LFImagePickerFlowLayout: UICollectionViewFlowLayout {
         self.sectionInset = UIEdgeInsetsMake(space, space, space, space)
         let width = ( bounds.width - self.space * 5 - 1) / CGFloat(itemOfRow)
         self.itemSize = CGSize(width: width, height: width)
-//        if let collectionView = (self.collectionView as? LFImagePickerCollectionView) {
-//            collectionView.contentOffset = self.targetContentOffset(forProposedContentOffset: collectionView.contentOffset)
-//        }
+
     }
     // 旋转之后重新布局，维持contentOffset和之前显示的cell一致
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
@@ -36,3 +34,28 @@ class LFImagePickerFlowLayout: UICollectionViewFlowLayout {
         return super.targetContentOffset(forProposedContentOffset: proposedContentOffset)
     }
 }
+
+class LFImagePickerPreviewFlowLayout:UICollectionViewFlowLayout {
+    
+    override func prepare() {
+        self.minimumLineSpacing = 0
+        self.minimumInteritemSpacing = 0
+        if let collectionView = self.collectionView {
+            self.itemSize = collectionView.bounds.size
+            collectionView.contentOffset = self.targetContentOffset(forProposedContentOffset: collectionView.contentOffset)
+        }
+    }
+    
+    //旋转后保证还是之前的图片
+    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
+        if let collectionView = self.collectionView as? LFImagePickerCollectionView,let prevItemSize = collectionView.prevItemSize {
+            let rows = collectionView.prevOffset / prevItemSize.width
+            collectionView.prevItemSize = nil
+            return CGPoint(x: self.itemSize.width * rows, y: 0)
+        }
+        return super.targetContentOffset(forProposedContentOffset: proposedContentOffset)
+    }
+    
+}
+
+

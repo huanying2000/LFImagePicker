@@ -26,6 +26,7 @@ class LFImagePickerAssetsController: UIViewController,UICollectionViewDelegate,U
         if let title = self.groupModel.getAlbumName() {
             self.title = title
         }
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(btnCancelTouch(button:)))
         self.collectionView.register(UINib(nibName: "LFImagePickerCell", bundle: nil), forCellWithReuseIdentifier: "LFImageCollectionViewCell")
         self.selectedCountLbl.layer.masksToBounds = true
         self.selectedCountLbl.layer.cornerRadius = 10.0
@@ -90,7 +91,11 @@ class LFImagePickerAssetsController: UIViewController,UICollectionViewDelegate,U
     }
     //MARK: 点击图片 预览
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let vc = LFImagePickerPreviewController()
+        vc.dataSource = dataSource
+        vc.delegate = self.delegate
+        vc.initialIndexPath = indexPath
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc func btnCheckTouch(_ sender:UIButton) {
@@ -126,14 +131,22 @@ class LFImagePickerAssetsController: UIViewController,UICollectionViewDelegate,U
     
     //用户点击完成
     @IBAction func btnFinishedComplete(_ sender: Any) {
-        
+        delegate.didFinishPicking()
     }
     
     //预览
     @IBAction func btnPreviewTouch(_ sender: Any) {
+        let dataSource = delegate.selectedSource
+        let vc = LFImagePickerPreviewController()
+        vc.dataSource = dataSource
+        vc.delegate = self.delegate
+        vc.initialIndexPath = nil
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
+    @objc func btnCancelTouch(button:UIButton) {
+        delegate.didCancel()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

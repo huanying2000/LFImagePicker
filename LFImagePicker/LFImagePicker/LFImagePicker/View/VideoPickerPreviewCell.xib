@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="VideoPickerPreviewCell" customModule="LFImagePicker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="215" height="187"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="215" height="187"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtA-iR-B9g">
+                        <rect key="frame" x="0.0" y="0.0" width="215" height="187"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7de-Y5-EIX">
+                                <rect key="frame" x="0.0" y="0.0" width="215" height="187"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aI-TD-M1L">
+                                <rect key="frame" x="65" y="51" width="85" height="85"/>
+                                <state key="normal" image="video_preview_play"/>
+                                <connections>
+                                    <action selector="btnPlayerClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="rSB-sb-8UI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7de-Y5-EIX" firstAttribute="top" secondItem="dtA-iR-B9g" secondAttribute="top" id="JUm-fo-l9C"/>
+                            <constraint firstAttribute="trailing" secondItem="7de-Y5-EIX" secondAttribute="trailing" id="bq9-cx-X8I"/>
+                            <constraint firstItem="9aI-TD-M1L" firstAttribute="centerY" secondItem="dtA-iR-B9g" secondAttribute="centerY" id="evF-ft-CoB"/>
+                            <constraint firstItem="7de-Y5-EIX" firstAttribute="leading" secondItem="dtA-iR-B9g" secondAttribute="leading" id="jcx-RL-mBf"/>
+                            <constraint firstItem="9aI-TD-M1L" firstAttribute="centerX" secondItem="dtA-iR-B9g" secondAttribute="centerX" id="oKI-aJ-n29"/>
+                            <constraint firstAttribute="bottom" secondItem="7de-Y5-EIX" secondAttribute="bottom" id="p3U-uz-YMU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dtA-iR-B9g" secondAttribute="trailing" id="ECz-0p-KTL"/>
+                <constraint firstAttribute="bottom" secondItem="dtA-iR-B9g" secondAttribute="bottom" id="N3L-Pg-NBT"/>
+                <constraint firstItem="dtA-iR-B9g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="UZG-e2-uJ9"/>
+                <constraint firstItem="dtA-iR-B9g" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="r2u-4x-Q3L"/>
+            </constraints>
+            <size key="customSize" width="215" height="187"/>
+            <connections>
+                <outlet property="avPlayerView" destination="dtA-iR-B9g" id="OXd-2c-ADd"/>
+                <outlet property="btnPlay" destination="9aI-TD-M1L" id="V3d-HR-56e"/>
+                <outlet property="imageView" destination="7de-Y5-EIX" id="yO2-UR-5QN"/>
+            </connections>
+            <point key="canvasLocation" x="-202" y="83"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="video_preview_play" width="85" height="85"/>
+    </resources>
+</document>
